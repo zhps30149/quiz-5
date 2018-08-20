@@ -21,10 +21,10 @@ const txb = new bitcoin.TransactionBuilder(regtest);
 
 
 //用listunspent 取出最後一筆資料的txid
-txb.addInput('400b0b606efeb0a89b7e8cb2262a9ca2281479b2d37102ef504b56af2381259b', 0);
+txb.addInput('400b0b606efeb0a89b7e8cb2262a9ca2281479b2d37102ef504b56af2381259b', 25);
 
 //用getnewaddress取得新的位址
-txb.addOutput('2N4Wq4uXPhQGsc6xcxzz3zWpKdCtvWQGrji', 25);
+txb.addOutput('2N4Wq4uXPhQGsc6xcxzz3zWpKdCtvWQGrji', 12);
 
 //交易簽名
 txb.sign(0, keyPair); //第一個位置的是上一筆交易中的第一個支出，第二個欄位是我們的公鑰與私鑰
